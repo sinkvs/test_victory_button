@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="start-screen">
+        <img id="start-image" src="start_leo.jpg" alt="Start Image">
+    </div>
+    <div id="quiz-screen" class="hidden">
+        <img id="question-image" src="buke.png" alt="Question Image">
+        <div id="quiz-container"> <!-- Контейнер для вопросов и ответов -->
+            <div id="question-box" class="rounded-box">
+                <p id="question-text">Вопрос?</p>
+            </div>
+            <div id="answer-buttons">
+                <button class="answer-btn">Ответ A</button>
+                <button class="answer-btn">Ответ B</button>
+                <button class="answer-btn">Ответ C</button>
+            </div>
+        </div>
+        <img id="feedback-image" src="" alt="Feedback Image" class="hidden">
+    </div>
+    <div id="finish-screen" class="hidden">
+        <img src="finish_capture.png" alt="Finish Image">
+    </div>
+    <audio id="background-audio" src="background.mp3" loop></audio>
+    <audio id="good-audio" src="good.mp3"></audio>
+    <audio id="error-audio" src="error.mp3"></audio>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.hidden {
+    display: none;
+}
+
+#start-screen, #quiz-screen, #finish-screen {
+    text-align: center;
+}
+
+#start-image, #question-image, #finish-screen img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+#quiz-container {
+    position: absolute;
+    top: 50%; /* Регулируйте это значение для вертикального положения контейнера */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%; /* Регулируйте ширину контейнера */
+}
+
+#question-box {
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 90%; /* Регулируйте ширину блока с вопросом */
+    height: auto; /* Регулируйте высоту блока с вопросом */
+}
+
+#answer-buttons {
+    margin-top: 20px;
+    width: 100%; /* Регулируйте ширину блока с ответами */
+}
+
+.answer-btn {
+    display: block;
+    width: 90%; /* Регулируйте ширину кнопок ответов */
+    margin: 10px auto;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(145deg, #8e2de2, #4a00e0);
+    color: white;
+    transition: background 0.3s;
+}
+
+.answer-btn:hover {
+    background: linear-gradient(145deg, #7b2cbc, #5a189a);
+}
+
+.blink-red {
+    animation: blink-red 0.5s infinite !important;
+}
+
+.blink-green {
+    animation: blink-green 0.5s infinite !important;
+}
+
+@keyframes blink-red {
+    0% { background-color: red; }
+    50% { background-color: transparent; }
+    100% { background-color: red; }
+}
+
+@keyframes blink-green {
+    0% { background-color: green; }
+    50% { background-color: transparent; }
+    100% { background-color: green; }
+}
+
+#feedback-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+}
